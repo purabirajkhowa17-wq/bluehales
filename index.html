@@ -17,9 +17,15 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
-.overlay a {
-  margin-top: 300px; 
-  display: inline-block;
+@media (max-width: 600px) {
+  .overlay {
+    padding-top: 15vh;   /* less top space on mobile */
+  }
+
+  .start-btn {
+    margin-top: 15px;    /* adjust button spacing if needed */
+  }
+}
 }
 }
 </style>
@@ -42,4 +48,5 @@ body {
 </body>
 
 </html>
+
 
