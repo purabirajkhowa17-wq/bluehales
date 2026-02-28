@@ -24,9 +24,11 @@ body {
   align-items: center;       /* horizontal center */
   text-align: center;
   min-height: 100vh;         /* fill full screen */
-  padding-bottom: 10vh;      /* distance from bottom */
   width: 100%;
   box-sizing: border-box;
+}
+  .spacer {
+  flex-grow: 1;    /* takes all remaining vertical space */
 }
 
 /* START button styling */
@@ -39,6 +41,7 @@ body {
   text-decoration: none;
   color: white;
   text-align: center;
+   margin-bottom: 5vh;
   transition: opacity 0.3s;
 }
 
@@ -48,11 +51,9 @@ body {
 
 /* Responsive adjustments for small screens */
 @media (max-width: 600px) {
-  .overlay {
-    padding-bottom: 5vh;  /* less space from bottom on mobile */
-  }
   .overlay a {
-    padding: 10px 25px;   /* smaller button on mobile */
+    padding: 10px 25px;
+    margin-bottom: 3vh; /* smaller spacing on mobile */
   }
 }
 </style>
@@ -62,8 +63,10 @@ body {
 
 <div class="overlay">
   <!-- START button near bottom -->
+  <div class="spacer"></div>
   <a href="https://forms.gle/baGQZDorUpcUzTcR7">START</a>
 </div>
 
 </body>
 </html>
+
