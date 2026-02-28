@@ -1,50 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>REIKI</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
+/* Full-page background */
 body {
   margin: 0;
   min-height: 100vh;
   background: url("nemu/REIKIguru.png") no-repeat center center;
   background-size: cover;
-  /* background-attachment: fixed; removed for mobile */
+  /* background-attachment: fixed; removed for mobile compatibility */
 }
 
-/* Overlay container */
+/* Overlay container to position button */
 .overlay {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* start from top */
-  align-items: center;         /* horizontal center */
+  justify-content: flex-start;  /* content starts from top */
+  align-items: center;          /* horizontal center */
   text-align: center;
-  padding-top: 30vh;           /* 30% of viewport height */
+  padding-top: 30vh;            /* pushes button below background text on desktop */
+  width: 100%;                  /* ensures full width */
+  box-sizing: border-box;
 }
 
-/* START button */
+/* START button styling */
 .overlay a {
   display: inline-block;
-  margin-top: 2vh;             /* small spacing after top */
+  margin-top: 2vh;              /* small spacing if more content added */
   padding: 12px 30px;
   background: linear-gradient(to right, #ef4444, #d946ef);
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
   color: white;
+  text-align: center;           /* button text centered */
+  transition: opacity 0.3s;
 }
 
-/* Responsive adjustments for small screens */
+.overlay a:hover {
+  opacity: 0.9;
+}
+
+/* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
   .overlay {
-    padding-top: 20vh;         /* less top padding on mobile */
+    padding-top: 20vh;          /* slightly less top space on mobile */
   }
   .overlay a {
-    padding: 10px 25px;        /* smaller button on mobile */
+    padding: 10px 25px;         /* smaller button on mobile */
   }
 }
 </style>
@@ -53,12 +62,8 @@ body {
 <body>
 
 <div class="overlay">
-
-<!-- ✅ Centered Start Button -->
-<a href="https://forms.gle/baGQZDorUpcUzTcR7">
-   START
-</a>
-
+  <!-- Centered START button -->
+  <a href="https://forms.gle/baGQZDorUpcUzTcR7">START</a>
 </div>
 
 </body>
