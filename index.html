@@ -14,32 +14,31 @@ body {
   min-height: 100vh;
   background: url("nemu/REIKIguru.png") no-repeat center center;
   background-size: cover;
-  /* background-attachment: fixed; removed for mobile compatibility */
 }
 
-/* Overlay container to position button */
+/* Overlay container to position button near bottom */
 .overlay {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;  /* content starts from top */
-  align-items: center;          /* horizontal center */
+  justify-content: flex-end; /* pushes content to bottom */
+  align-items: center;       /* horizontal center */
   text-align: center;
-  padding-top: 30vh;            /* pushes button below background text on desktop */
-  width: 100%;                  /* ensures full width */
+  min-height: 100vh;         /* fill full screen */
+  padding-bottom: 10vh;      /* distance from bottom */
+  width: 100%;
   box-sizing: border-box;
 }
 
 /* START button styling */
 .overlay a {
   display: inline-block;
-  margin-top: 2vh;              /* small spacing if more content added */
   padding: 12px 30px;
   background: linear-gradient(to right, #ef4444, #d946ef);
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
   color: white;
-  text-align: center;           /* button text centered */
+  text-align: center;
   transition: opacity 0.3s;
 }
 
@@ -47,13 +46,13 @@ body {
   opacity: 0.9;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive adjustments for small screens */
 @media (max-width: 600px) {
   .overlay {
-    padding-top: 20vh;          /* slightly less top space on mobile */
+    padding-bottom: 5vh;  /* less space from bottom on mobile */
   }
   .overlay a {
-    padding: 10px 25px;         /* smaller button on mobile */
+    padding: 10px 25px;   /* smaller button on mobile */
   }
 }
 </style>
@@ -62,7 +61,7 @@ body {
 <body>
 
 <div class="overlay">
-  <!-- Centered START button -->
+  <!-- START button near bottom -->
   <a href="https://forms.gle/baGQZDorUpcUzTcR7">START</a>
 </div>
 
