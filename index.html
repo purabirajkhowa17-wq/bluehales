@@ -16,33 +16,34 @@ body {
   background-size: cover;
 }
 
-/* Overlay container to position button near bottom */
+/* Overlay container */
 .overlay {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* pushes content to bottom */
-  align-items: center;       /* horizontal center */
+  justify-content: flex-start; /* stack from top */
+  align-items: center;         /* center horizontally */
   text-align: center;
-  min-height: 100vh;         /* fill full screen */
+  min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
+  padding-bottom: 13vh;        /* moves button ~5cm above bottom */
 }
-  .spacer {
-  flex-grow: 0.5;    /* takes all remaining vertical space */
-    height: 70%;
+
+/* Spacer to push button down */
+.spacer {
+  flex-grow: 1;                 /* fills remaining space */
 }
 
 /* START button styling */
 .overlay a {
   display: inline-block;
-  padding: 12px 30px;
-  background: linear-gradient(to right, #ef4444, #d946ef);
-  border-radius: 10px;
+  padding: 10px 30px;           /* slim vertical padding */
+  border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   color: white;
   text-align: center;
-   margin-bottom: 16vh;
+  background: linear-gradient(to right, #ef4444, #d946ef);
   transition: opacity 0.3s;
 }
 
@@ -50,32 +51,23 @@ body {
   opacity: 0.9;
 }
 
-/* Responsive adjustments for small screens */
+/* Responsive adjustments for mobile */
 @media (max-width: 600px) {
+  .overlay {
+    padding-bottom: 10vh;        /* slightly less space on small screens */
+  }
   .overlay a {
-   padding: 10px 25px;
-    margin-bottom: 13vh;
+    padding: 8px 25px;           /* smaller button on mobile */
   }
 }
 </style>
-
 </head>
 <body>
 
 <div class="overlay">
-  <!-- START button near bottom -->
-  <div class="spacer"></div>
+  <div class="spacer"></div> <!-- pushes button down -->
   <a href="https://forms.gle/baGQZDorUpcUzTcR7">START</a>
 </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
